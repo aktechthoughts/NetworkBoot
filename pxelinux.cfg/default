@@ -1,0 +1,16 @@
+default vesamenu.c32
+prompt 0
+timeout 100
+ONTIMEOUT Damn Small Linux 4.4.10
+
+LABEL Damn Small Linux 4.4.10
+  menu label Damn Small Linux 4.4.10 (51M)
+  kernel syslinux/memdisk/memdisk
+  append initrd=iso/dsl-4.4.10-initrd.iso raw iso ramdisk_size=100000 init=/etc/init lang=en quiet vga=791
+
+LABEL lubuntu-14.10
+  MENU LABEL Lubuntu-14.10 Over HTTP (705M)
+  dhcp
+  kernel http://192.168.173.2:8000/syslinux/memdisk/memdisk iso raw
+  initrd http://192.168.173.2:8000/iso/lubuntu-14.10-desktop-i386.iso iso
+
